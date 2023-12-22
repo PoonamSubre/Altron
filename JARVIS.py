@@ -46,7 +46,6 @@ def takeCommand():
         print(f"User said: {query}\n")
 
     except Exception as e:
-        # print(e)
         print("Say that again please...")
         return "None"
     return query
@@ -64,10 +63,8 @@ def sendEmail(to, content):
 if __name__ == "__main__":
     wishMe()
     while True:
-        # if 1:
         query = takeCommand().lower()
-
-        # Logic for executing tasks based on query
+        
         if 'what is the' in query:
             speak('Searching in my brain...')
             query = query.replace("wikipedia", "")
